@@ -1,0 +1,95 @@
+/* Reset styles for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .box {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Adjust height to fit the container */
+  }
+  
+  .main-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+  
+  .box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    filter: brightness(1.2);
+    cursor: pointer;
+  }
+  
+  .slick-slide div {
+    margin: 0 1rem;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Ensure arrows are above videos */
+  }
+  
+  .slick-prev {
+    left: 60px;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+  
+  /* New CSS for info-container */
+  .info-container {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+    color: #fff; /* Text color */
+    text-align: center;
+    position: absolute;
+    bottom: 1; /* Position at the bottom of the box */
+  }
+  
+  .item-name {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .item-price {
+    font-size: 16px;
+    margin: 0;
+  }
